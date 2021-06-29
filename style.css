@@ -141,4 +141,8 @@ input[type = "submit"]:hover{
      #time{
          margin-bottom: 24%;
      }
+    
+    .point{
+        display : none;
+    }
 }
