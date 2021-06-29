@@ -1,0 +1,144 @@
+*{
+    margin : 0;
+    padding : 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+   
+}
+
+.back{
+    position: fixed;
+    top : 0;
+    left : 0;
+    right : 0;
+    bottom : 0;
+    background-image: url(corona.jpg);
+    z-index : 1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    filter: blur(7px);
+}
+.heading{
+    z-index : 999999;
+    text-align: center;
+    color : red;
+    margin-top: 25px;
+    font-size: 4rem;
+    position: relative;
+    font-weight: bolder;
+}
+
+form{
+    z-index : 999999;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+@keyframes op {
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+.point{
+    position: absolute;
+    top : 44%;
+    left : -5%;
+    height : 15px;
+    width : 15px;
+    border-radius: 50%;
+    background-color: red;
+    opacity: 1;
+    animation : 0.8s op ease-in-out 0.2s infinite alternate;
+}
+
+form input{
+    line-height: 1;
+    font-size: 3rem;
+    outline: none;
+}
+
+input[type = "submit"]{
+    background-color: red;
+    padding : 0.5rem 0.735rem ;
+    color : white;
+    outline: none;
+    border : 1px solid transparent;
+}
+input[type = "submit"]:hover{
+
+    box-shadow: 0px 0px 2px 4px rgb(245, 150, 150);
+}
+
+.record{
+    color  : black;
+    font-size: 2.5rem;
+    margin-top: 18px;
+}
+.record1{
+    color : white;
+    font-size: 2.3rem;
+}
+#area , #recover , #positive , #deaths , #active , #time{
+    display: inline-block;
+}
+
+#box{
+    z-index : 999999;
+    display: grid;
+    width : 80vw;
+    margin-top: 3rem;
+    grid-template-columns: repeat(auto-fit , minmax(15rem , 1fr));
+    grid-gap: 2rem;
+}
+
+.trx{
+    height: 6rem;
+    font-size: 2.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 2px 1px rgb(117, 117, 117);
+}
+
+.title{
+     text-align: center;    
+}
+
+@media screen and (max-width : 700px) {
+    
+    .heading{
+       font-size: 2rem;
+        margin : 25px auto;
+        font-family: fantasy;
+        border-bottom: 0.2rem solid red;
+  
+    }
+
+    form input{
+         padding : 0;
+         font-size: 1.2rem;
+         line-height: 1.5;   
+    }
+
+    input[type = "submit"]{
+        padding : 0.2rem 0.4rem;
+        border-radius: 12px;
+    }
+     .point{
+        top: 250%;
+        left: 1%;
+     }
+
+     #time{
+         margin-bottom: 24%;
+     }
+}
